@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 用户信息字段配置信息 -->
+<hibernate-mapping>
+    <class name="com.pjb.ssh.entity.User" table="tb_user">
+        <!-- 用户编号id值 -->
+        <id name="id" column="id" type="int">
+            <!-- 持久化类的唯一性标识 -->
+            <generator class="identity"/>
+        </id>
+
+        <!-- 用户姓名 -->
+        <property name="userName" type="string" not-null="true" length="50">
+            <column name="user_name"/>
+        </property>
+
+        <!-- 博客地址 -->
+        <property name="blogUrl" type="string" not-null="true" length="50">
+            <column name="blog_url"/>
+        </property>
+
+        <!-- 性别（1：男；2：女；） -->
+        <property name="sex" type="int">
+            <column name="sex"/>
+        </property>
+
+        <!-- 省份 -->
+        <property name="provinceName" type="string" length="20">
+            <column name="province_name"/>
+        </property>
+
+        <!-- 兴趣爱好 -->
+        <property name="hobby" type="string" length="50">
+            <column name="hobby"/>
+        </property>
+
+        <!-- 备注 -->
+        <property name="remark" type="string" length="50">
+            <column name="remark"/>
+        </property>
+    </class>
+</hibernate-mapping>
