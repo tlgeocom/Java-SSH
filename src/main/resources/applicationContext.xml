@@ -9,16 +9,16 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName">
-            <value>com.mysql.cj.jdbc.Driver</value>
+            <value>org.postgresql.Driver</value>
         </property>
         <property name="url">
-            <value>jdbc:mysql://localhost:3306/db_admin?useSSL=false&amp;serverTimezone=GMT%2b8</value>
+            <value>jdbc:postgresql://localhost:5432/postgres?useSSL=false&amp;serverTimezone=GMT%2b8</value>
         </property>
         <property name="username">
-            <value>root</value>
+            <value>postgres</value>
         </property>
         <property name="password">
-            <value>123456</value>
+            <value>postgres</value>
         </property>
     </bean>
 
